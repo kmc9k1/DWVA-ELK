@@ -1,0 +1,39 @@
+---
+- name: configure the webservers with docker
+  hosts: webservers
+  become: true
+  tasks:
+
+  - name: Uninstall the apache webserver
+    apt:
+      name: apache2
+      state: absent
+
+  - name: Install docker
+    apt:
+      update_cache: yes
+      name: docker.io
+      state: present
+
+  - name: install python-pip
+    apt:
+      name: python3-pip
+      state : present
+
+  - name: install the python docker module
+    pip:
+      name: docker
+      state: present
+
+  - name: download and launch a container with DVWA
+    docker_container:
+      name: dvwa
+      image: cyberxsecurity/dvwa
+      state: started
+      restart_policy: always
+      published_ports: 80:80
+
+  - name: enable the docker service
+    systemd:
+      name: docker
+      enabled: yes
