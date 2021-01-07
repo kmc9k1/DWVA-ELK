@@ -108,12 +108,12 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because of ease of use and scalablity.
-
+```
 The playbook implements the following tasks:
 -Installs docker.io
 -Installs python3-pip
 -Downloads and launches a docker ELK container
-
+```
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![](https://github.com/kmc9k1/DWVA-ELK/blob/main/Diagrams/docker_ps.png)
@@ -127,7 +127,7 @@ We have installed the following Beats on these machines:
 Filebeat
 Metricbeat
 
-These Beats allow us to collect the following information from each machine:
+### These Beats allow us to collect the following information from each machine:
 Filebeat: Filebeat detects changes to the filesystem. Specifically, we use it to collect Apache logs.
 Metricbeat: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics
 
