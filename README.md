@@ -124,10 +124,12 @@ DWVA 1 - 10.0.0.7
 DWVA 2 - 10.0.0.8
 
 We have installed the following Beats on these machines:
+```
 Filebeat
 Metricbeat
-
+```
 ### These Beats allow us to collect the following information from each machine:
+```
 Filebeat: Filebeat detects changes to the filesystem. Specifically, we use it to collect Apache logs.
 Metricbeat: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics
-
+```
