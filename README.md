@@ -10,7 +10,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   <summary>InstallELK.yml</summary>
   <p>
   
-  ```
+```
 ---
 # install_elk.yml
 - name: Configure Elk VM with Docker
