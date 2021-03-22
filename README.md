@@ -10,6 +10,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   <summary>InstallELK.yml</summary>
   <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
 </details>
+
 ```
 ---
 # install_elk.yml
